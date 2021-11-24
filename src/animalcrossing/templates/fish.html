@@ -1,0 +1,12 @@
+{% extends 'index.html' %}
+{% load static%}
+
+{% block content %}
+
+{% if object %}
+<h2>
+    {{object.name}}
+</h2>
+{% endif %}
+
+{% endblock %}

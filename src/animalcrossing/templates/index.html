@@ -1,0 +1,70 @@
+{% load static%}
+<!DOCTYPE HTML>
+<!--
+	Split Screen by Pixelarity
+	pixelarity.com | hello@pixelarity.com
+	License: pixelarity.com/license
+-->
+<html>
+	<title>Animal Crossing Fishing Availability</title>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" type=text/css href="{% static 'css/main.css' %}" />
+	</head>
+	<body class="is-preload"> 
+		​<div id="footer">
+			&nbsp jsroussel11@gmail.com &copy; James Roussel
+		</div>
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+						<div class="inner">
+							<h1><b>Animal Crossing Fishing Availability</b></h1>
+							<h2>
+								By providing your game's information you 
+								can determine what fish are currently available on your island. Give it a try!<br>
+								{% block content %}
+								{% endblock %}
+							</h2>
+							<p></p>
+							<ul class="actions">
+							</ul>
+						</div>
+						<footer>
+							<ul class="icons">
+							</ul>
+						</footer>
+					</section>
+
+				<!-- Banner -->
+					<section> <!-- List functionality banner -->
+						<div class="inner">
+							<div class="content">
+								<ul>
+									<head>
+										<form action="" method='GET'> 
+										{% csrf_token %}
+											<select name="Season" size="1">
+										
+												<option selected="true" disabled="disabled">Season:</option>
+												<option value="Fall">Fall</option>
+												<option value="Winter">Winter</option>
+												<option value="Spring">Spring </option>
+												<option value="Summer">Summer</option>
+											</select>			
+										<button type="submit">Confirm</button>
+										</form>
+								</ul>
+							</div>
+						</div>
+					</section>
+			</div>
+
+		<!-- Scripts -->
+			<script src="{%static 'js/main.js'%}"></script>
+
+	</body>
+</html>
